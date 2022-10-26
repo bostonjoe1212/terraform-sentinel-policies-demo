@@ -2,8 +2,8 @@ terraform_version = "0.12.24"
 
 variables = {
 	"ami_id": {
-		"name":  "ami_id",
-		"value": "ami-2e1ef954",
+		"name":  "ami-id",
+		"value": "ami-1338139",
 	},
 	"associate_public_ip_address": {
 		"name":  "associate_public_ip_address",
@@ -45,7 +45,7 @@ resource_changes = {
 				"monitoring":                           null,
 				"source_dest_check":                    true,
 				"tags": {
-					"Name":  "roger-demo",
+					"CostCenter":  "102",
 					"Owner": "rberlind",
 					"Environment": "dev",
 				},
@@ -116,7 +116,7 @@ resource_changes = {
 				"tags": {
 					"Name":  "roger-demo",
 					"Owner": "rberlind",
-					"Environment": "qa",
+					"CostCenter": "102",
 				},
 				"timeouts":         null,
 				"user_data":        null,
@@ -183,7 +183,7 @@ resource_changes = {
 				"monitoring":                           null,
 				"source_dest_check":                    true,
 				"tags": {
-					"Name":  "roger-demo-nested",
+					"CostCenter":  "102",
 					"Owner": "rberlind",
 					"Environment": "prod",
 				},

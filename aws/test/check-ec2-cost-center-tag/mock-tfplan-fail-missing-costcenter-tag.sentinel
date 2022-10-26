@@ -46,7 +46,7 @@ resource_changes = {
 				"source_dest_check":                    true,
 				"tags": {
 					"Name":  "roger-demo",
-					"Owner": "rberlind",
+					"CostCenter": "102",
 				},
 				"timeouts":         null,
 				"user_data":        null,
@@ -181,7 +181,7 @@ resource_changes = {
 				"monitoring":                           null,
 				"source_dest_check":                    true,
 				"tags": {
-					"Name":  "roger-demo-nested",
+					"CostCenter":  "102",
 					"Owner": "rberlind",
 				},
 				"timeouts":         null,

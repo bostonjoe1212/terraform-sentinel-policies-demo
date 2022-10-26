@@ -45,7 +45,7 @@ resource_changes = {
 				"monitoring":                           null,
 				"source_dest_check":                    true,
 				"tags": {
-					"Name":  "roger-demo",
+					"CostCenter":  "106",
 					"Owner": "rberlind",
 					"Environment": "test",
 				},
@@ -115,7 +115,7 @@ resource_changes = {
 				"source_dest_check":                    true,
 				"tags": {
 					"Name":  "roger-demo",
-					"Owner": "rberlind",
+					"CostCenter": "102",
 					"Environment": "production",
 				},
 				"timeouts":         null,

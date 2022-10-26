@@ -4,7 +4,7 @@ module "tfplan-functions" {
 
 mock "tfplan/v2" {
   module {
-    source = "mock-tfplan-fail-missing-environment-tag.sentinel"
+    source = "mock-tfplan-fail-missing-costcenter-tag.sentinel"
   }
 }
 

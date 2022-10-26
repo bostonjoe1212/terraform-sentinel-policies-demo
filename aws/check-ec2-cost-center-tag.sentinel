@@ -7,11 +7,11 @@
 import "tfplan-functions" as plan
 
 # Cost Center tags
-cost_center_tags = ["CostCenter"]
+cost_center_tag = ["CostCenter"]
 
 # Allowed Environments
 # Include "null" to allow missing or computed values
-allowed_environments = ["101", "102", "103"]
+allowed_cost_center_values = ["101", "102", "103"]
 
 # Get all EC2 instances
 allEC2Instances = plan.find_resources("aws_instance")
@@ -20,12 +20,12 @@ allEC2Instances = plan.find_resources("aws_instance")
 # Warnings will be printed for all violations since the last parameter is true
 EC2InstancesWithoutEnvironmentTag =
         plan.filter_attribute_not_contains_list(allEC2Instances,
-                        "tags", cost_center_tags, true)
+                        "tags", cost_center_tag, true)
 
 # Filter to EC2 instances that have the environment tag with an invalid value
 # Warnings will be printed for all violations since the last parameter is true
 EC2InstancesWithInvalidEnvironmentTag = plan.filter_attribute_map_key_contains_items_not_in_list(allEC2Instances,
-                        "tags", "Environment", allowed_environments, true)
+                        "tags", cost_center_tag, allowed_cost_center_values, true)
 
 # Count violations
 violations = length(EC2InstancesWithoutEnvironmentTag["messages"]) + length(EC2InstancesWithInvalidEnvironmentTag["messages"])
