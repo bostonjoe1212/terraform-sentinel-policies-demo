@@ -24,8 +24,7 @@ policy "restrict-launch-configuration-instance-type" {
   enforcement_level = "hard-mandatory"
 }
 
-policy "restrict-launch-configuration-instance-type" {
-  source = "./check-ec2-environment-tag.sentinell"
+policy "check-ec2-cost-center-tag" {
+  source = "./check-ec2-cost-center-tag.sentinel"
   enforcement_level = "hard-mandatory"
 }
-
