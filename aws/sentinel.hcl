@@ -23,3 +23,9 @@ policy "restrict-launch-configuration-instance-type" {
   source = "./restrict-launch-configuration-instance-type.sentinel"
   enforcement_level = "hard-mandatory"
 }
+
+policy "restrict-launch-configuration-instance-type" {
+  source = "./check-ec2-environment-tag.sentinell"
+  enforcement_level = "hard-mandatory"
+}
+
